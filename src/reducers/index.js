@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import myReducer from './myReducer';
+import fetchReducer from './myReducer';
 
 
 export default combineReducers({
-  stateName: myReducer,
+  weatherInfo: fetchReducer,
   //Add here other state names for each reducer
 });
