@@ -3,6 +3,6 @@ import fetchReducer from './fetchReducer';
 
 
 export default combineReducers({
-  weatherInfo: fetchReducer,
+  weather: fetchReducer,
   //Add here other state names for each reducer
 });
