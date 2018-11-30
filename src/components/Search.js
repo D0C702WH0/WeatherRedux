@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../actions/fetchDataActions";
+import DisplayWeather from "./DisplayWeather";
 
 class Search extends Component {
   state = {
-    city: ""
+    city: "",
   };
 
   handleChange = e => {
@@ -20,6 +21,8 @@ class Search extends Component {
 
   render() {
     const { city } = this.state;
+    const { isLoaded } = this.props;
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -31,13 +34,14 @@ class Search extends Component {
           />
           <button>Search</button>
         </form>
+        {isLoaded && <DisplayWeather />}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  fetchData: state.weather.weatherInfo
+  isLoaded:state.weather.isLoaded
 });
 
 export default connect(
