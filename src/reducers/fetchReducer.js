@@ -2,7 +2,8 @@ import { FETCH_DATA } from "../actions/types";
 
 const initialState = {
   weatherInfo: [],
-  isLoaded: false
+  isLoaded: false,
+  iconUrl:null
 };
 
 export default function(state = initialState, action) {
@@ -11,7 +12,8 @@ export default function(state = initialState, action) {
       return {
         ...state,
         weatherInfo: action.weatherInfo,
-        isLoaded: action.isLoaded
+        isLoaded: action.isLoaded,
+        iconUrl:action.iconUrl
       };
     default: {
       return state;
