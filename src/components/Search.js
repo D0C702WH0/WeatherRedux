@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../actions/fetchDataActions";
 import DisplayWeather from "./DisplayWeather";
+import "./Search.css"
 
 class Search extends Component {
   state = {
@@ -25,21 +26,21 @@ class Search extends Component {
     const { isLoaded } = this.props;
 
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="Search">
+        <form className="FormSearch" onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
             value={cityValue}
             name="cityValue"
             id="city"
-            placeholder="Ex: Paris"
+            placeholder="Ville Ex: Paris"
           />
           <input
             onChange={this.handleChange}
             value={countryValue}
             name="countryValue"
             id="country"
-            placeholder="Ex: Fr"
+            placeholder="Pays Ex: Fr"
           />
           <button>Search</button>
         </form>
