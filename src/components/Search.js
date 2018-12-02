@@ -5,22 +5,23 @@ import DisplayWeather from "./DisplayWeather";
 
 class Search extends Component {
   state = {
-    city: "",
+    cityValue: "",
+    countryValue: ""
   };
 
   handleChange = e => {
     this.setState({
-      city: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.fetchData(this.state.city);
+    this.props.fetchData(this.state.cityValue, this.state.countryValue);
   };
 
   render() {
-    const { city } = this.state;
+    const { cityValue, countryValue } = this.state;
     const { isLoaded } = this.props;
 
     return (
@@ -28,9 +29,17 @@ class Search extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
-            value={city}
-            name="city"
+            value={cityValue}
+            name="cityValue"
             id="city"
+            placeholder="Ex: Paris"
+          />
+          <input
+            onChange={this.handleChange}
+            value={countryValue}
+            name="countryValue"
+            id="country"
+            placeholder="Ex: Fr"
           />
           <button>Search</button>
         </form>
@@ -41,7 +50,7 @@ class Search extends Component {
 }
 
 const mapStateToProps = state => ({
-  isLoaded:state.weather.isLoaded
+  isLoaded: state.weather.isLoaded
 });
 
 export default connect(
