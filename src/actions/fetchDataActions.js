@@ -5,8 +5,6 @@ export const fetchData = (cityValue, countryValue) => dispatch => {
   const apiKey = process.env.REACT_APP_API_KEY;
   const city = cityValue;
   const country = countryValue;
-  console.log(country);
-
   if (city) {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}&lang=fr`;
 
