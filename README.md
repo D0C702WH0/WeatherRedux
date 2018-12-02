@@ -1,3 +1,30 @@
+An api based weather app using a simple redux just to see how it works
+
+NEEDED  ( already implemented in package.json ) : 
+    "axios": "^0.18.0",
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    
+Don't forget to run 
+$ npm install
+
+after cloning this resposetory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
