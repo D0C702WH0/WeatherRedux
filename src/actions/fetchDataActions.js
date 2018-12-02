@@ -5,7 +5,7 @@ export const fetchData = (cityValue, countryValue) => dispatch => {
   const apiKey = process.env.REACT_APP_API_KEY;
   const city = cityValue;
   const country = countryValue;
-  if (city) {
+  if (city && country) {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}&lang=fr`;
 
     axios
@@ -25,5 +25,8 @@ export const fetchData = (cityValue, countryValue) => dispatch => {
           );
         }
       });
+  }
+  else {
+    alert("Veuillez indiquer une ville (ex: London) et un pays (ex: UK)")
   }
 };
