@@ -12,7 +12,7 @@ class DisplayWeather extends Component {
         </h1>
         <p>{weatherInfo.weather[0].description}</p>
         <img src={iconUrl} alt="weather icon" />
-        <p>{weatherInfo.main.temp}°</p>
+        <p>{Math.ceil(weatherInfo.main.temp)}°</p>
       </div>
     );
   }
