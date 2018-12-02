@@ -19,7 +19,6 @@ export const fetchData = value => dispatch => {
       )
       .catch(error => {
         if (error.toString().includes(404)) {
-          console.log(error);
           alert(
             `${city.toUpperCase()} n'est pas une ville connue de la base de données`
           );
