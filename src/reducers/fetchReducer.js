@@ -3,7 +3,6 @@ import { FETCH_DATA } from "../actions/types";
 const initialState = {
   weatherInfo: [],
   isLoaded: false
-  //Write here your state properties for this reducer with there initial value
 };
 
 export default function(state = initialState, action) {

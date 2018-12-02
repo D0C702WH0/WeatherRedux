@@ -7,7 +7,7 @@ class DisplayWeather extends Component {
     const { weatherInfo } = this.props;
     return (
       <div>
-        <h1>{weatherInfo.name}</h1>
+        <h1>{weatherInfo.name}({weatherInfo.sys.country})</h1>
         <p>{weatherInfo.weather[0].description}</p>
         <p>{weatherInfo.main.temp}°</p>
       </div>
