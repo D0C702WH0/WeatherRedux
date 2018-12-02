@@ -1,3 +1,18 @@
+A api based weather app using a simple redux just to see how it works
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
