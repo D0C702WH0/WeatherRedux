@@ -7,7 +7,7 @@ NEEDED  ( already implemented in package.json ) :
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     
-Don't forget to run "$ npm install" after cloning this resposetory
+Don't forget to run /// $ npm install /// after cloning this resposetory
 
 
 Deployed on Heroku : https://weatheredux.herokuapp.com/
