@@ -6,7 +6,7 @@ export const fetchData = (cityValue, countryValue) => dispatch => {
   const city = cityValue;
   const country = countryValue;
   if (city && country) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}&lang=fr`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}&lang=fr`;
 
     axios
       .get(url)
@@ -15,7 +15,7 @@ export const fetchData = (cityValue, countryValue) => dispatch => {
           type: FETCH_DATA,
           weatherInfo: res.data,
           isLoaded: true,
-          iconUrl: `http://openweathermap.org/img/w/${res.data.weather[0].icon}.png`
+          iconUrl: `https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`
         })
       )
       .catch(error => {
